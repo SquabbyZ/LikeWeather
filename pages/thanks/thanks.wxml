@@ -1,0 +1,6 @@
+<!-- pages/thanks/thanks.wxml -->
+<view class="thanks" animation="{{animation}}">
+    <text>感谢百度地图提供的数据</text>
+    <text>背景音乐：励阳,张贝绮 - Where is the love（remix）</text>
+    <image src="http://39.106.197.44/static/likeWeather/images/thanks.jpg" />
+</view>

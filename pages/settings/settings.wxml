@@ -1,0 +1,41 @@
+<view class="page-section" style="margin-top: 40rpx;margin-bottom: 0;">
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd">指示点</view>
+      <view class="weui-cell__ft">
+        <switch checked="{{indicatorDots}}" bindchange="changeProperty" data-property-name="indicatorDots" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd">自动播放</view>
+      <view class="weui-cell__ft">
+        <switch checked="{{autoplay}}" bindchange="changeProperty" data-property-name="autoplay" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd">衔接滑动</view>
+      <view class="weui-cell__ft">
+        <switch checked="{{circular}}" bindchange="changeProperty" data-property-name="circular" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_switch">
+      <view class="weui-cell__bd">竖向</view>
+      <view class="weui-cell__ft">
+        <switch checked="{{vertical}}" bindchange="changeProperty" data-property-name="vertical" />
+      </view>
+    </view>
+  </view>
+</view>
+<view class="page-section page-section-spacing">
+  <view class="page-section-title">
+    <text>幻灯片切换时长(ms)</text>
+    <text class="info">{{duration}}</text>
+  </view>
+  <slider value="{{duration}}" min="500" max="2000" bindchange="changeProperty" data-property-name="duration" />
+  <view class="page-section-title">
+    <text>自动播放间隔时长(ms)</text>
+    <text class="info">{{interval}}</text>
+  </view>
+  {{interval}}
+  <slider value="{{interval}}" min="2000" max="10000" bindchange="changeProperty" data-property-name="interval" />
+</view>

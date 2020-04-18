@@ -1,0 +1,42 @@
+<view class="weather" style="background: url(http://39.106.197.44/static/likeWeather/images/like-weatherbg.jpg); background-size: contain;background-repeat: no-repeat;background-size: 100% 100%;">
+    <view class="real-time-temperature">
+        <view class="temperature-date">
+            <text class="temperature">{{realTimeTemperature}}</text>
+            ℃
+            <text class="date">{{otherWeather.date}}</text>
+        </view>
+        <view class="details">
+            <text class="city">城市：{{weatherData.currentCity}}</text>
+            <text class="city">PM2.5：{{weatherData.pm25}}</text>
+            <text class="section">
+                今日气温：{{weatherData.temperature}} · {{weatherData.weatherDesc}} · {{weatherData.wind}}
+            </text>
+            {{locations}}
+        </view>
+    </view>
+    <swiper indicator-dots="{{settings.indicatorDots}}" autoplay="{{settings.autoplay}}" interval="{{settings.interval}}" duration="{{settings.duration}}" circular="{{settings.circular}}" indicator-dots="{{settings.indicatorDots}}" id="swipers">
+        <block wx:for="{{proposal}}" wx:key="{{index}}">
+            <swiper-item >
+                <text class="des">{{item.des}}</text>
+                <text class="zs">{{item.title}}{{item.zs}}</text>
+            </swiper-item>
+        </block>
+    </swiper>
+     <view class="page__bd">
+    <view class="section section_gap">
+    
+    </view>
+  </view>
+    <view class="other-info">
+    <view class="other-day" wx:for="{{otherDate}}" wx:key="{{index}}">
+        <text>{{item.date}}</text>
+        <text >{{item.temperature
+}}</text>
+<text >{{item.weather}}</text>
+<text >{{item.wind}}</text>
+    </view>
+    </view>
+    <image src="../../static/images/music_open.png" class="musics active" bind:tap="parseMusic" wx:if="{{musics}}" 
+        />
+    <image src="../../static/images/music_close.png" class="musics" bind:tap="playMusic" wx:else/>
+</view>

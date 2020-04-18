@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/thanks/thanks",
+    "pages/settings/settings"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "LikeWeather",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#000",
+    "color":"#ccc000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/images/home1296db.png",
+        "selectedIconPath": "./static/images/homee16531.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "地市选择",
+        "iconPath": "./static/images/place1296db.png",
+        "selectedIconPath": "./static/images/placee16531.png"
+      },
+      {
+        "pagePath": "pages/settings/settings",
+        "text": "设置(待完善)",
+        "iconPath": "./static/images/settings1296db.png",
+        "selectedIconPath": "./static/images/settingse16531.png"
+      },
+      {
+        "pagePath": "pages/thanks/thanks",
+        "text": "鸣谢",
+        "iconPath": "./static/images/jrit1296db.png",
+        "selectedIconPath": "./static/images/jrite16531.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
