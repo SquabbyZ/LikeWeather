@@ -13,8 +13,8 @@ Page({
     duration: 0
   },
   changeProperty: function(e) {
-    var propertyName = e.currentTarget.dataset.propertyName;
-    var newData = {};
+let  propertyName = e.currentTarget.dataset.propertyName;
+let newData = {};
     newData[propertyName] = e.detail.value;
     this.setData(newData);
   },

@@ -1,0 +1,22 @@
+<!--pages/map/map.wxml-->
+
+<view class="map_container">
+  <!-- <map id='map' longitude='{{longitude}}' latitude='{{latitude}}' scale='{{scale}}' markers='{{markers}}' controls="{{controls}}" bindcontroltap="bindcontroltap" polyline='{{polyline}}' circles="{{circles}}" bindmarkertap='bindmarkertap' bindcontroltap='bindcontroltap'
+    show-location></map> -->
+    <map id="map"   longitude='{{longitude}}' latitude='{{latitude}}'  scale='{{scale}}'  bindtap="eventhandle"></map>
+    <cover-image src="../../static/images/position.png" class="location-img"  bindtap="touchLocation"></cover-image>
+</view>
+<!-- 以下是导航部分 -->
+ 
+<view class='list-guide'>
+<!-- 这里的坐标本应该是从服务器获取数据的,这时丈先写死在页面上了 -->
+  <!-- <view bindtap="onGuideTap" data-latitude='39.92392' data-longitude='116.411885' data-bankName='最高人民检察院'>
+    <image src='../../static/images/location.png' class='list-guide-imgae'></image>
+    <text class='list-guide-text'>导航</text>
+  </view>
+  <view bindtap='onbankTap' data-bankId="{{item.BANK_ID}}">
+    <image src='../../static/images/location.png' class='list-guide-imgae'></image>
+    <text class='list-guide-text'>详情</text>
+  </view> -->
+   </view>
+

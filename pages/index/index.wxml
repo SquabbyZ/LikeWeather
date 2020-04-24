@@ -1,21 +1,21 @@
 <view class="weather" style="background: url(http://39.106.197.44/static/likeWeather/images/like-weatherbg.jpg); background-size: contain;background-repeat: no-repeat;background-size: 100% 100%;">
     <view class="real-time-temperature">
         <view class="temperature-date">
-            <text class="temperature">{{realTimeTemperature}}</text>
+            <text class="temperature">{{weatDatas.realTimeTemperature}}</text>
             ℃
-            <text class="date">{{otherWeather.date}}</text>
+            <text class="date">{{weatDatas.otherWeather.date}}</text>
         </view>
         <view class="details">
-            <text class="city">城市：{{weatherData.currentCity}}</text>
-            <text class="city">PM2.5：{{weatherData.pm25}}</text>
+            <text class="city">城市：{{weatDatas.weatherData.currentCity}}</text>
+            <text class="city">PM2.5：{{weatDatas.weatherData.pm25}}</text>
             <text class="section">
-                今日气温：{{weatherData.temperature}} · {{weatherData.weatherDesc}} · {{weatherData.wind}}
+                今日气温：{{weatDatas.weatherData.temperature}} · {{weatDatas.weatherData.weatherDesc}} · {{weatDatas.weatherData.wind}}
             </text>
-            {{locations}}
+            {{weatDatas.location}}
         </view>
     </view>
     <swiper indicator-dots="{{settings.indicatorDots}}" autoplay="{{settings.autoplay}}" interval="{{settings.interval}}" duration="{{settings.duration}}" circular="{{settings.circular}}" indicator-dots="{{settings.indicatorDots}}" id="swipers">
-        <block wx:for="{{proposal}}" wx:key="{{index}}">
+        <block wx:for="{{weatDatas.proposal}}" wx:key="{{index}}">
             <swiper-item >
                 <text class="des">{{item.des}}</text>
                 <text class="zs">{{item.title}}{{item.zs}}</text>
@@ -28,7 +28,7 @@
     </view>
   </view>
     <view class="other-info">
-    <view class="other-day" wx:for="{{otherDate}}" wx:key="{{index}}">
+    <view class="other-day" wx:for="{{weatDatas.otherDate}}" wx:key="{{index}}">
         <text>{{item.date}}</text>
         <text >{{item.temperature
 }}</text>

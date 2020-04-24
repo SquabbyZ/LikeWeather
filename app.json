@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/search/search",
     "pages/thanks/thanks",
-    "pages/settings/settings"
+    "pages/map/map"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,7 +13,7 @@
   },
   "tabBar": {
     "backgroundColor": "#000",
-    "color":"#ccc000",
+    "color": "#ccc000",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -28,10 +28,10 @@
         "selectedIconPath": "./static/images/placee16531.png"
       },
       {
-        "pagePath": "pages/settings/settings",
-        "text": "设置(待完善)",
-        "iconPath": "./static/images/settings1296db.png",
-        "selectedIconPath": "./static/images/settingse16531.png"
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "./static/images/map1296db.png",
+        "selectedIconPath": "./static/images/mape16531.png"
       },
       {
         "pagePath": "pages/thanks/thanks",
@@ -40,6 +40,11 @@
         "selectedIconPath": "./static/images/jrite16531.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   },
   "sitemapLocation": "sitemap.json"
 }
